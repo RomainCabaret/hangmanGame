@@ -1,0 +1,15 @@
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\bin\Debug\net6.0\hangmanGame.exe
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\bin\Debug\net6.0\hangmanGame.deps.json
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\bin\Debug\net6.0\hangmanGame.runtimeconfig.json
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\bin\Debug\net6.0\hangmanGame.dll
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\bin\Debug\net6.0\hangmanGame.pdb
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.csproj.AssemblyReference.cache
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.AssemblyInfoInputs.cache
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.AssemblyInfo.cs
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.csproj.CoreCompileInputs.cache
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.dll
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\refint\hangmanGame.dll
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.pdb
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.genruntimeconfig.cache
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\ref\hangmanGame.dll
