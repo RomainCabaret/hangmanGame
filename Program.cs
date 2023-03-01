@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Net.Http.Headers;
 
 namespace HangmanGame
 {
     class Program
     {
-        static char RequestLetter()
+        static char RequestLetter(string message = "Rentrez une lettre : ")
         {
             
             while(true)
             {
-                Console.Write("Entrez une lettre : ");
+                Console.Write(message);
                 string UserChar = Console.ReadLine();
                 try
                 {
@@ -42,6 +43,7 @@ namespace HangmanGame
         static void GuessWord(string word)
         {
             List<char> letters = new List<char>();
+            List<char> wrongLetters = new List<char>();
 
             const int NB_HEALTH = 6;
             int health = NB_HEALTH;
@@ -49,6 +51,8 @@ namespace HangmanGame
 
             while (health > 0)
             {
+                Console.WriteLine(Hangman.PENDU[NB_HEALTH - health] + "\n");
+
                 ShowWord(word, letters);
                 char UserChar = RequestLetter();
 
@@ -65,17 +69,26 @@ namespace HangmanGame
                     }
 
                 }
-                else
+                else if (!wrongLetters.Contains(UserChar))
                 {
-                    Console.WriteLine("Cette lettre n'est pas dans le mot");
+                    wrongLetters.Add(UserChar);
                     health--;
+                }
+
+                if (wrongLetters.Count > 0)
+                {
+
+                    Console.WriteLine("Le mot ne contient pas les lettres : " + String.Join(", ", wrongLetters));
                 }
                 Console.WriteLine($"vies restantes : {health}");
             }
 
 
+            Console.WriteLine(Hangman.PENDU[NB_HEALTH - health] + "\n");
+
             if (health == 0)
             {
+
                 Console.WriteLine($"\nPERDU ! Le mot était : {word}");
             }
             else
@@ -101,14 +114,67 @@ namespace HangmanGame
                 return false;
             }
         }
+        static string[] LoadWords(string nameFile)
+        {
+            try
+            {
+                return File.ReadAllLines(nameFile);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erreur de lecture du fichier : {nameFile} ({ex.Message})");
+            }
+            return null;
+        }
+        static bool SendReplay()
+        {
+            char UserChoice = RequestLetter("Voulez vous rejouer (o/n) ");
 
+            if (UserChoice == 'o' || UserChoice == 'O')
+            {
+                return true;
+            }
+            else if (UserChoice == 'n' || UserChoice == 'N')
+            {
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("Erreur : Vous devez répondre avec o ou n");
+                return SendReplay();
+            }
+        }
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            string word = "ELEPHANT";
+            string[] words = LoadWords("words.txt");
 
-            GuessWord(word);
+            if(words == null || (words.Length == 0))
+            {
+                Console.WriteLine("La liste de mots est vide");
+            }
+            else
+            {
+                while (true)
+                {
+                    Random rnd = new Random();
+                    string word = words[rnd.Next(words.Length)].Trim().ToUpper();
+
+                    GuessWord(word);
+
+                    if (!SendReplay())
+                    {
+                        break;
+                    }
+                    Console.Clear();
+                }
+
+
+                
+               
+            }
+
         }
     }
 }

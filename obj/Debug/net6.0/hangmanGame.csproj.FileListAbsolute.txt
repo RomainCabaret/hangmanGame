@@ -13,3 +13,4 @@ C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\refint\h
 C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.pdb
 C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\hangmanGame.genruntimeconfig.cache
 C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\obj\Debug\net6.0\ref\hangmanGame.dll
+C:\Users\Romain\Desktop\dev\cs\hangmanGame\hangmanGame\bin\Debug\net6.0\words.txt
